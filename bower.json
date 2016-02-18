@@ -1,0 +1,67 @@
+{
+    "name": "DocuWareWeb",
+    "description": "",
+    "main": "Scripts/dw/main.js",
+    "authors": [
+        "Ivaylo Velikov <evoolster@gmail.com>"
+    ],
+    "license": "ISC",
+    "moduleType": [ ],
+    "homepage": "",
+    "private": true,
+    "dependencies": {
+        "mootools": "1.6.0",
+        "bootstrap": "3.3.6",
+        "requirejs": "2.1.22",
+        "requirejs-text": "2.0.14",
+        "knockout": "3.4.0",
+        "mootools-more": "1.6.0"
+    },
+    "dependenciesIgnore": {
+        "requirejs": [
+			"**/!(require.js)"
+		],
+		"requirejs-text": [
+			"**/!(text.js)"
+		],
+		"mootools": [
+			"Grunt",
+			"Source",
+			"*.*"
+		],
+		"mootools-more": [
+			"Docs",
+			"Specs",
+			"Styles",
+			"Tests",
+			"*.*",
+			".*"
+		],
+        "jquery": [
+            "build",
+            "src",
+            "test",
+            "external",
+            "*.*"
+        ],
+        "knockout": [
+			"build",
+			"src",
+			"*.*"
+		],
+		"bootstrap": [
+			"fonts",
+			"grunt",
+			"js",
+			"nuget",
+			"*.*"
+		]
+    },
+    "ignore": [
+        "**/ .*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

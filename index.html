@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/vendor/requirejs/require.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        //setSomeGlobalSettings...
+
+        //var baseUrl = 'Scripts'
+        var baseUrl = 'Release'
+
+        require.config({
+            baseUrl: baseUrl
+        });
+
+        require(["config"], function () {
+
+            require(["dw/main"], function () {
+                
+            });
+        });
+    </script>
+    <div id="app" data-bind="text: $data.text"></div>
+</body>
+</html>
