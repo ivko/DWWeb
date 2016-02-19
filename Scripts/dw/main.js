@@ -6,7 +6,9 @@ require(['dw/core'], function (core) {
     var ko = require('knockout');
 
     core.configurePlugins({
-        dialog: true
+        dialog: {
+            dialogOption: 'dialogOption'
+        }
     }, 'dw/widgets');
 
     core.start().then(function () {

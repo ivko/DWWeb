@@ -5,23 +5,22 @@
     <script src="Scripts/vendor/requirejs/require.js"></script>
 </head>
 <body>
+
+    <div id="app" data-bind="text: $data.text"></div>
+
     <script type="text/javascript">
-        //setSomeGlobalSettings...
+        // Set some runtime settings...
+        var debug = false;
 
-        var baseUrl = 'Scripts'
-        //var baseUrl = 'Release'
+        // Set phisical path relative to current file accessed in the browser
+        var baseUrl = debug ? 'Scripts' : 'Release';
 
-        require.config({
-            baseUrl: baseUrl
-        });
+        require.config({ baseUrl: baseUrl });
 
         require(["config"], function () {
-
-            require(["dw/main"], function () {
-                
-            });
+            // starts application
+            require(["dw/main"]);
         });
     </script>
-    <div id="app" data-bind="text: $data.text"></div>
 </body>
 </html>
