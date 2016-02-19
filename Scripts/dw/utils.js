@@ -1,7 +1,9 @@
-﻿/// <reference path="../lib/jquery/dist/jquery.js" />
-define(['jquery', 'dw/global'], function ($) {
-
+﻿define(['jquery', 'dw/global'], function ($) {
+    
     var utils = {
+        addTemplates: function () {
+            $("body").append(Array.slice(arguments).join("\n"));
+        },
         log: function () {
             console.log.apply(console, arguments);
         },

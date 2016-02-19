@@ -1,0 +1,3 @@
+﻿Integrate into .NET Project
+https://github.com/yngvebn/ASP.NET.RequireJS
+http://blog.novanet.no/making-requirejs-play-nice-with-asp-net-mvc/
