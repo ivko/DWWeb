@@ -8,6 +8,13 @@ require.config({
         "mootools": "vendor/mootools/dist/mootools-core",
     },
     shim: {
+        'dw/a': {
+            deps: ['dw/b'],
+            exports: 'a'
+        },
+        'dw/b': {
+            exports: 'b'
+        },
         'knockout': {
             deps: ['jquery'],
             exports: 'jQuery'

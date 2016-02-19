@@ -1,7 +1,9 @@
 ﻿/// <reference path="../lib/requirejs/require.js" />
 /// <reference path="../lib/knockoutjs/dist/knockout.debug.js" />
 
-require(['dw/core', 'knockout'], function (core, ko) {
+require(['dw/core'], function (core) {
+
+    var ko = require('knockout');
 
     core.configurePlugins({
         dialog: true

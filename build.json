@@ -1,0 +1,22 @@
+﻿{
+	"mainConfigFile": "Scripts/config.js",
+	"dir": "Release",
+	"appDir": "Scripts",
+	"baseUrl": "./",
+	"optimize": "none",
+	"skipDirOptimize": true,
+	"optimizeCss": "none",
+	"removeCombined": false,
+	"findNestedDependencies": true,
+	"wrapShim": true,
+	"fileExclusionRegExp": "^(\\.|node_modules)$",
+	"modules": [{
+		"name": "dw/core"
+	}, {
+		"name": "dw/main",
+		"exclude": ["dw/core"]
+	}, {
+		"name": "dw/widgets/dialog",
+		"exclude": ["dw/core"]
+	}]
+}

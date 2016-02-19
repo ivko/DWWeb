@@ -1,4 +1,7 @@
-﻿module.exports = function (grunt) {
+/// <vs AfterBuild='requirejs:compile' />
+module.exports = function (grunt) {
+
+    var compileOptions = grunt.file.readJSON('build.json');
 
     // Project configuration.
     grunt.initConfig({
@@ -49,26 +52,7 @@
         },
         requirejs: {
             compile: {
-                options: {
-                    appDir: 'Scripts',
-                    baseUrl: './',
-                    mainConfigFile: 'Scripts/config.js',
-                    dir: 'Release',
-                    optimize: "none",
-                    skipDirOptimize: true,
-                    optimizeCss: "none",
-                    findNestedDependencies: true,
-                    wrapShim: true,
-                    fileExclusionRegExp: /^(\.|node_modules)$/,
-                    modules: [
-                        {
-                            name: 'dw/core'
-                        },
-                        {
-                            name: 'dw/main'
-                        }
-                    ]
-                }
+                options: compileOptions
             }
         },
     });

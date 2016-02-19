@@ -1,4 +1,4 @@
-﻿define(['jquery', 'dw/utils', 'dw/global'], function ($, utils) {
+﻿define(['jquery', 'dw/utils', 'dw/global', 'text'], function ($, utils) {
     var core,
         allPluginIds = [],
         allPluginConfigs = [];
