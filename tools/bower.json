@@ -1,0 +1,99 @@
+{
+    "name": "queryBuilder",
+    "description": "",
+    "main": "main.js",
+    "authors": [
+        "Ivaylo Velikov <evoolster@gmail.com>"
+    ],
+    "license": "ISC",
+    "moduleType": [ ],
+    "homepage": "",
+    "private": true,
+    "dependencies": {
+        "requirejs": "2.1.22",
+        "requirejs-text": "2.0.14",
+        "mootools-more": "mootools-more#1.6.0",
+        "moment": "~2.11.2",
+        "knockout-validation": "Knockout-Contrib/Knockout-Validation#^2.0.2",
+        "knockout": "knockout/knockout#^3.3.0",
+        "mootools": "mootools/mootools-core#^1.6.0",
+        "timeentry": "kbwood/timeentry#^2.0.1",
+        "dateentry": "kbwood/dateentry#^2.0.1",
+        "jquery": "jquery/jquery#^2.2.0",
+        "jquery-ui": "jquery/jquery-ui#^1.11.4",
+        "globalize": "jquery/globalize#^1.1.1",
+        "jquer-browser": "gabceb/jquery-browser-plugin",
+        "jquery-validation": "^1.14.0",
+        "jquery-validation-unobtrusive": "^3.2.5",
+        "bootstrap": "twbs/bootstrap#^3.3.5"
+    },
+    "dependenciesIgnore": {
+		"requirejs": [
+			"**/!(require.js)"
+		],
+		"requirejs-text": [
+			"**/!(text.js)"
+		],
+		"mootools": [
+			"Grunt",
+			"Source",
+			"*.*"
+		],
+		"mootools-more": [
+			"Docs",
+			"Specs",
+			"Styles",
+			"Tests",
+			"*.*",
+			".*"
+		],
+		"jquery": [
+			"build",
+			"src",
+			"test",
+			"external",
+			"*.*"
+		],
+		"jquery-ui": [
+			""
+		],
+		"globalize": [
+			"chore",
+			"doc",
+			"examples",
+			"src",
+			"*.*"
+		],
+		"knockout": [
+			"build",
+			"src",
+			"*.*"
+		],
+		"knockout-validation": [
+			"*.*"
+		],
+		"bootstrap": [
+			"fonts",
+			"grunt",
+			"js",
+			"nuget",
+			"*.*"
+		],
+		"cldrjs": [
+			"doc",
+			"src",
+			"test",
+			"*.*"
+		],
+		"cldr-data": [
+			"**/!(index.json)"
+		]
+	},
+    "ignore": [
+        "**/ .*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

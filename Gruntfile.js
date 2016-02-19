@@ -1,4 +1,4 @@
-/// <vs AfterBuild='requirejs:compile' />
+/// <vs BeforeBuild='requirejs:compile' />
 module.exports = function (grunt) {
 
     var compileOptions = grunt.file.readJSON('build.json');

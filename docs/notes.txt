@@ -1,3 +1,27 @@
-﻿Integrate into .NET Project
-https://github.com/yngvebn/ASP.NET.RequireJS
-http://blog.novanet.no/making-requirejs-play-nice-with-asp-net-mvc/
+﻿Links
+Integrate into .NET Project
+ - http://blog.novanet.no/making-requirejs-play-nice-with-asp-net-mvc/
+ - http://www.hanselman.com/blog/IntroducingGulpGruntBowerAndNpmSupportForVisualStudio.aspx
+
+System Software:
+ - git - https://git-scm.com/downloads
+ - Node.js - https://nodejs.org/en/download
+
+VS Software:
+ - Package Intellisense - https://visualstudiogallery.msdn.microsoft.com/65748cdb-4087-497e-a394-2e3449c8e61e
+ - Task Runner Explorer - https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708
+ - Grunt Launcher - https://visualstudiogallery.msdn.microsoft.com/dcbc5325-79ef-4b72-960e-0a51ee33a0ff
+
+#Mklink
+mklink /j "C:\Users\ivaylo velikov\Documents\Projects\QueryBuilder\app" "C:\tfs\DocuWare .NET\Main\src\DocuWare\Platform\PlatformWebClient\Areas\WebClient\Scripts"
+mklink /j "C:\Users\ivaylo velikov\Documents\Projects\QueryBuilder\lib\QueryBuilder" "C:\tfs\DocuWare .NET\Main\src\DocuWare\Silverlight\WAF\WAFHost\Scripts\Shared\QueryBuilder"
+
+missing bindings for "Query Builder":
+    position
+    contextMenu
+    jqueryui
+    command
+    tooltip2
+    spinner
+
+
