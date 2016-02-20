@@ -1,9 +1,9 @@
-Release
+release
 node_modules
-Scripts/vendor
+src/vendor
 DocuWare*
 Web*
 DesignTime*
 Temporary*
 Assembly*
-Scripts/_references.js
+src/_references.js

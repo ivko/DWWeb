@@ -1,9 +1,10 @@
 {
     "name": "DocuWareWeb",
     "description": "",
-    "main": "Scripts/dw/main.js",
+    "version": "1.0.0",
+    "main": "src/dw/main.js",
     "authors": [
-        "DocuWare Team <noreplay@domain.tld>"
+        "DocuWare Team <noreplay@docuware.com>"
     ],
     "license": "ISC",
     "moduleType": [ ],

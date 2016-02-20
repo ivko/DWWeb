@@ -8,13 +8,6 @@ require.config({
         "mootools": "vendor/mootools/dist/mootools-core",
     },
     shim: {
-        'dw/a': {
-            deps: ['dw/b'],
-            exports: 'a'
-        },
-        'dw/b': {
-            exports: 'b'
-        },
         'knockout': {
             deps: ['jquery'],
             exports: 'jQuery'
@@ -25,7 +18,14 @@ require.config({
         },
         "mootools-interfaces": [
             "mootools"
-        ]
+        ],
+        'dw/a': {
+            deps: ['dw/b'],
+            exports: 'a'
+        },
+        'dw/b': {
+            exports: 'b'
+        }
     },
     urlArgs: "bust=" + (new Date()).getTime()
 });
