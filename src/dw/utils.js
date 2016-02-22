@@ -1,4 +1,4 @@
-﻿define(['jquery', 'dw/global'], function ($) {
+﻿define(['jquery', './global'], function ($) {
     
     var utils = {
         addTemplates: function () {

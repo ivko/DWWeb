@@ -1,2 +1,2 @@
-var b = 'b';
+dw.b = 'b';
 console.log('b loaded')

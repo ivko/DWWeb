@@ -5,25 +5,17 @@ require.config({
         'knockout': 'vendor/knockout/dist/knockout.debug',
         'bootstrap': 'vendor/bootstrap/dist/js/bootstrap',
         'jquery': 'vendor/jquery/dist/jquery',
-        "mootools": "vendor/mootools/dist/mootools-core",
+        "mootools": "vendor/mootools/dist/mootools-core"
     },
     shim: {
-        'knockout': {
-            deps: ['jquery'],
-            exports: 'jQuery'
-        },
-        'bootstrap': {
-            deps: ['jquery'],
-            exports: 'jQuery'
-        },
-        "mootools-interfaces": [
-            "mootools"
-        ],
-        'dw/a': {
-            deps: ['dw/b'],
+        'knockout': ['jquery'],
+        'bootstrap': ['jquery'],
+        "mootools-interfaces": [ "mootools" ],
+        'dw/gallery/a': {
+            deps: ['dw/gallery/b'],
             exports: 'a'
         },
-        'dw/b': {
+        'dw/gallery/b': {
             exports: 'b'
         }
     },

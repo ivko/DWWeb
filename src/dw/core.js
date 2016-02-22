@@ -1,4 +1,4 @@
-﻿define(['jquery', 'dw/utils', 'dw/global'], function ($, utils) {
+﻿define(['jquery', './utils'], function ($, utils) {
     var core,
         allPluginIds = [],
         allPluginConfigs = [];
@@ -38,7 +38,7 @@
     core = {
         configurePlugins: function (config, baseUrl) {
             var pluginIds = Object.keys(config);
-            baseUrl = baseUrl || 'plugins/';
+            baseUrl = baseUrl || 'dw/widgets/';
 
             if (baseUrl.indexOf('/', baseUrl.length - 1) === -1) {
                 baseUrl += '/';
@@ -50,12 +50,15 @@
                 allPluginConfigs.push(config[key]);
             }
         },
-        start: function () {
+        load: function (config, baseUrl) {
+            
+            this.configurePlugins(config, baseUrl);
+            
             return utils.defer(function (dfd) {
                 $(function () {
                     loadPlugins().then(function () {
                         dfd.resolve();
-                        utils.log('Application:Started');
+                        utils.log('Core:Loaded');
                     });
                 });
             }).promise();

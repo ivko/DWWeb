@@ -3,15 +3,13 @@
 
 require(['dw/core'], function (core) {
 
-    var ko = require('knockout');
-
-    core.configurePlugins({
+    core.load({
         dialog: {
             dialogOption: 'dialogOption'
         }
-    }, 'dw/widgets');
-
-    core.start().then(function () {
+    }).then(function () {
+        var ko = require('knockout');
+        
         ko.applyBindings({
             text: 'Application Started'
         }, document.getElementById('app'));

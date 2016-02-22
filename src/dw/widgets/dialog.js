@@ -1,17 +1,17 @@
 define([
-    'dw/utils',
-    'dw/a',
-    'text!dw/templates/t1.html',
-    'text!dw/templates/t2.html'],
-function (utils, a, t1, t2) {
-
+    '../utils',
+    './b',
+    'text!../templates/t1.html',
+    'text!../templates/t2.html'],
+function (utils, b, t1, t2) {
+    
     // TODO: css, localization??
 
     // Adding owned templates.
     utils.addTemplates(t1, t2);
 
     // Use some system methods
-    utils.log('dialog loaded', a, t1, t2);
+    utils.log('dialog loaded', window, t1, t2);
 
     // Define plugin
     var dialog = {
