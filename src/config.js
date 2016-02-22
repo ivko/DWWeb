@@ -11,12 +11,12 @@ require.config({
         'knockout': ['jquery'],
         'bootstrap': ['jquery'],
         "mootools-interfaces": [ "mootools" ],
-        'dw/gallery/a': {
-            deps: ['dw/gallery/b'],
-            exports: 'a'
+        'dw/widgets/dialog/b': {
+            deps: ['dw/widgets/dialog/a'],
+            exports: 'dw'
         },
-        'dw/gallery/b': {
-            exports: 'b'
+        'dw/widgets/dialog/a': {
+            exports: 'dw'
         }
     },
     urlArgs: "bust=" + (new Date()).getTime()
