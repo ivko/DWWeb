@@ -1,8 +1,6 @@
 /// <vs BeforeBuild='requirejs:compile' />
 module.exports = function (grunt) {
 
-    var compileOptions = grunt.file.readJSON('build.json');
-
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -100,13 +98,7 @@ module.exports = function (grunt) {
 
 
               // includes files within path
-              /*{
-                expand: true,
-                cwd: 'lib/WebClient/Views/Shared/Templates',
-                src: '**',
-                dest: 'src/Templates',
-                filter: 'isFile'
-              },
+              /*
               {
                 expand: true,
                 cwd: 'lib/SharedResources/Components/Bindings',
@@ -125,7 +117,7 @@ module.exports = function (grunt) {
         },
         requirejs: {
             compile: {
-                options: compileOptions
+                options: grunt.file.readJSON('build.json')
             }
         },
     });
