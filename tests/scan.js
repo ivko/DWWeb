@@ -15,16 +15,16 @@ var DependenciesScanner = new Class({
         //"timeentry": [/\.timeEntry/g],
         //"datetimeentry": [/\.datetimeEntry/g],
         //"globalize": [/[.*]Globalize/g],
-        "dw/viewModel/command": [/DW\.Command/],
-        "dw/viewModel/disposable": [/DW\.Disposable/],
+        //"dw/widgets/AutocompleteVM": [/Autocomplete/g],
         "dw/utils": [/DW\.Utils/],
-        "dw/core": [/[\s](ns|namespace)\(/],
-        "dw/widgets/autocomplete": [/Autocomplete/g],
-        "dw/widgets/queryBuilder": [/QueryBuilder\./],
-        "dw/bindings": [/ko\.bindingHandlers\./]
+        "dw/core": [/[\S](ns|namespace)\(/],
+        "dw/core/ViewModel": [/(DW\.)?ViewModel/],
+        "dw/core/Command": [/(DW\.)?Command/],
+        "dw/core/Disposable": [/(DW\.)?Disposable/],
+        "dw/core/Bindings": [/ko\.bindingHandlers\./],
     },
     directories: [
-        'lib/SharedResources',
+        '../bower_components/SharedResources/Components',
         //'lib/QueryBuilder',
         //'app'
     ],

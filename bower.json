@@ -11,52 +11,11 @@
     "homepage": "",
     "private": true,
     "dependencies": {
-        "mootools": "1.6.0",
-        "bootstrap": "3.3.6",
+        "jquery": "2.1.4",
+        "jquery-ui": "1.10.3",
         "requirejs": "2.1.22",
         "requirejs-text": "2.0.14",
-        "knockout": "3.4.0",
-        "mootools-more": "1.6.0"
-    },
-    "dependenciesIgnore": {
-        "requirejs": [
-			"**/!(require.js)"
-		],
-		"requirejs-text": [
-			"**/!(text.js)"
-		],
-		"mootools": [
-			"Grunt",
-			"Source",
-			"*.*"
-		],
-		"mootools-more": [
-			"Docs",
-			"Specs",
-			"Styles",
-			"Tests",
-			"*.*",
-			".*"
-		],
-        "jquery": [
-            "build",
-            "src",
-            "test",
-            "external",
-            "*.*"
-        ],
-        "knockout": [
-			"build",
-			"src",
-			"*.*"
-		],
-		"bootstrap": [
-			"fonts",
-			"grunt",
-			"js",
-			"nuget",
-			"*.*"
-		]
+        "SharedResources": "C:/tfs/DocuWare .NET/Main/src/DocuWare/RestfulWebservices/AspMvcSharedResources/SharedResources"
     },
     "ignore": [
         "**/ .*",

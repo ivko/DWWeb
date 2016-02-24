@@ -1,8 +1,0 @@
-{
-    "directory": "lib",
-    "analytics": false,
-    "timeout": 120000,
-    "scripts": {
-        "postinstall": "build/post_install"
-    }
-}

@@ -1,3 +1,6 @@
 {
-	"directory": "src/vendor"
+    "analytics": false,
+    "scripts": { 
+        "postinstall": "tools/bower_postinstall"
+    }
 }
