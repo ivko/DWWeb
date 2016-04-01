@@ -1,4 +1,5 @@
 ﻿define(['jquery', './utils'], function ($, utils) {
+    
     var core,
         allPluginIds = [],
         allPluginConfigs = [];
@@ -13,7 +14,6 @@
             utils.acquire(allPluginIds).then(function (loaded) {
                 for (var i = 0; i < loaded.length; i++) {
                     var currentModule = loaded[i];
-
                     if (currentModule.install) {
                         var config = allPluginConfigs[i];
                         if (!utils.isObject(config)) {

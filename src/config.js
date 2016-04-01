@@ -73,8 +73,8 @@ require.config({
     shim: {
         'knockout': ['jquery'],
         'dw/widgets/dialog/b': {
-            deps: ['dw/widgets/dialog/a'],
-            exports: 'dw'
+            deps: ['dw/widgets/dialog/a']
+            
         },
         'dw/widgets/dialog/a': {
             exports: 'dw'

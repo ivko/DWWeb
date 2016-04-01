@@ -1,0 +1,43 @@
+1. Какво искаме да направим?
+    - Искаме да позволим на външни екипи да работят с контролите/модулите които правим. (основната причина)
+
+    - Да създадем условия за лесно създаване на нови контроли/модули. (без излишни движения :))
+
+    - Да автоматизираме build процеса.
+
+    - Да имаме по-добре организиран и структуриран код.
+
+    - Да "извадим" всички чужди библиотеки от кода "НИ".
+    
+2. Какво трябва да направим?
+    - Да решим какво е това което искаме да споделим.
+
+    - Дефиниция на пакет? (dw.core?, dw.ui? or dw) 
+	
+    - Разделяне на отговорностите:
+        -- мениджър на пакети (bower) - http://slides.com/gion/why-use-bower
+        -- автор на пакет (dw team)
+
+	- Node.js tools - http://slides.com/arvindbhardwaj/frontend-workflow-managenemt
+
+    - Да използваме AMD модули (RequireJS) за да изместим логиката и условията за създаване, минифициране и оптимизиране на ресурсите от бек-енд-а (.NET) във фронт-енд-а (JavaScript).
+        -- http://gregfranko.com/requirejs-talk/
+
+    - Да създадем pre-build процес (GruntJS)
+        -- http://andersjanmyr.github.io/grunt-presentation/
+        -- http://slides.com/seandempsey/grunt101
+    
+3. Какво допълнително ще получим ако горното бъде изпълнено.
+    - better performance ?
+    - ??
+4. Какво трябва да направим за да мигрираме към новия подход.
+    - ??
+    
+    
+    
+Node.js command-line tools for front-end development.
+    - How To Use Npm, Bower, Grunt and Requirejs - Explanation and examples
+    
+https://www.adobe.com/devnet/archive/html5/articles/nodejs-command-line-tools-for-front-end-development.html
+http://jsforallof.us/2015/02/12/utilising-node-and-npm-for-front-end-development-workflow/
+    

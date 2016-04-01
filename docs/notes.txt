@@ -1,7 +1,15 @@
-﻿Links
+﻿Преди всичко
+ - Разделяне на отговорностите
+	1. asset/package management
+	2. separate own code from external assets
+	3. build process management
+
+Links
 Integrate into .NET Project
  - http://blog.novanet.no/making-requirejs-play-nice-with-asp-net-mvc/
  - http://www.hanselman.com/blog/IntroducingGulpGruntBowerAndNpmSupportForVisualStudio.aspx
+
+
 
 === Software ===
 System:
@@ -25,16 +33,18 @@ New file structure:
     dw/core.js
     dw/global.js
     dw/utils.js
-	vendor/
-		...
-    assets/
+    less/
+	lib/
+    extensions
+        /jquery.extensions
+        /knockout.extensions
+        /globalize.extensions
 		...
 
 /release
     /dw/core.js
     /assets
 	/...
-/less
 /tests
 /docs
 

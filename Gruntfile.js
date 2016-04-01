@@ -71,7 +71,7 @@ module.exports = function (grunt) {
                 { src: 'bower_components/requirejs/require.js', dest: 'src/vendor/require.js' },
                 { src: 'bower_components/requirejs-text/text.js', dest: 'src/vendor/text.js' },
                 { src: 'bower_components/jquery/dist/jquery.js', dest: 'src/vendor/jquery.js' },
-                { cwd: 'bower_components/jquery-ui/ui/', src: ['*'], dest: 'src/vendor/jquery-ui/', expand: true, filter: 'isFile' },
+                //{ cwd: 'bower_components/jquery-ui/ui/', src: ['*'], dest: 'src/vendor/jquery-ui/', expand: true, filter: 'isFile' },
 
                 { src: 'bower_components/SharedResources/Scripts/knockout-3.4.0.debug.js', dest: 'src/vendor/knockout.js' },
                 { src: 'bower_components/SharedResources/Scripts/Mootools/mootools-core.js', dest: 'src/vendor/mootools-core.js' },
@@ -93,25 +93,6 @@ module.exports = function (grunt) {
                 { src: 'bower_components/SharedResources/Components/Bindings/knockout-delegatedEvents.js', dest: 'src/vendor/knockout-delegatedEvents.js' },
                 { src: 'bower_components/SharedResources/Components/Bindings/knockout-sortable.js', dest: 'src/vendor/knockout-sortable.js' },
                 { src: 'bower_components/SharedResources/Components/Bindings/knockout.validation.js', dest: 'src/vendor/knockout.validation.js' },
-
-
-
-
-              // includes files within path
-              /*
-              {
-                expand: true,
-                cwd: 'lib/SharedResources/Components/Bindings',
-                src: '**',
-                dest: 'src/Bindings'
-              },
-              {
-                expand: true,
-                cwd: 'lib/SharedResources/Components/Bindings',
-                src: '**',
-                dest: 'src/Bindings'
-              }
-              */
             ],
           },
         },

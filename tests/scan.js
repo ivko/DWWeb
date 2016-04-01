@@ -8,37 +8,45 @@ var DependenciesScanner = new Class({
     Files: [],
     shim: {},
     _timeotId: null,
+    basePath: 'bower_components/SharedResources/Components',
     mappings: {
-        "mootools": [/new Class/g],
-        "jquery": [/jQuery/g, /$\(/],
-        "knockout": [/([\S]ko\.)/g],
-        //"timeentry": [/\.timeEntry/g],
-        //"datetimeentry": [/\.datetimeEntry/g],
-        //"globalize": [/[.*]Globalize/g],
-        //"dw/widgets/AutocompleteVM": [/Autocomplete/g],
-        "dw/utils": [/DW\.Utils/],
-        "dw/core": [/[\S](ns|namespace)\(/],
-        "dw/core/ViewModel": [/(DW\.)?ViewModel/],
-        "dw/core/Command": [/(DW\.)?Command/],
-        "dw/core/Disposable": [/(DW\.)?Disposable/],
-        "dw/core/Bindings": [/ko\.bindingHandlers\./],
+        "mootools": [/new Class/],
+        "jquery": [/jQuery/, /\b\$\(/],
+        "knockout": [/(\bko\.)/],
+        "timeentry": [/\.timeEntry/],
+        "datetimeentry": [/\.datetimeEntry/],
+        "globalize": [/\bGlobalize/],
+        "dw/widgets/AutocompleteVM": [/\bAutocomplete/],
+        "dw/utils": [/\bDW\.Utils/],
+        "dw/core": [/\b(ns|namespace)\(/],
+        "dw/core/ViewModel": [/\b(DW\.)?ViewModel/],
+        "dw/core/Command": [/\b(DW\.)?Command/],
+        "dw/core/Disposable": [/\b(DW\.)?Disposable/],
+        "ko.jqui.bindingFactory": [/jqui\.bindingFactory/],
+        "dw/core/Bindings": [/\bko\.bindingHandlers\./],
     },
     directories: [
-        '../bower_components/SharedResources/Components',
+        'SharedResources/Components',
         //'lib/QueryBuilder',
         //'app'
     ],
     initialize: function () {
+        
+        this.fileList = fs.readFileSync(path.join(__dirname, 'SharedResources.list.txt')).toString().split("\r\n");
+        
         this.directories.forEach(function(directory) {
 
-            file.walkSync(directory, function(dirPath, dirs, files) {
+            file.walkSync(path.join(this.basePath, directory), function(dirPath, dirs, files) {
                 files
                     .filter(function(file) {
-                        return file.substr(-3) === '.js';
-                    })
+                        var cfile = path.relative(this.basePath, path.join(dirPath, file)).split(path.sep).join('/');
+                        return this.fileList.indexOf(cfile) > -1;
+                    }.bind(this))
                     .forEach(function(file) {
-                        var moduleId = path.relative('lib/', path.join(dirPath, file));
+                        var moduleId = path.relative(this.basePath, path.join(dirPath, file));
                         //var moduleId = path.normalize(file);
+                        //var moduleId = path.join(dirPath, file);
+                        //console.log(moduleId);
                         moduleId = moduleId.split(path.sep).join('/');
                         this.Files.push(moduleId);
                         var fullPath = path.join(dirPath , file);
@@ -81,9 +89,9 @@ var DependenciesScanner = new Class({
     },
 
     inspectFile: function (file, contents) {
-        var moduleId = path.relative('lib/', file);
-        moduleId = moduleId.split(path.sep).join('/');
-                        
+        
+        var moduleId = path.relative(this.basePath, file).split(path.sep).join('/');
+        
         clearTimeout(this._timeotId);
         var regs = [];
         for( var name in this.mappings ) {
@@ -106,9 +114,9 @@ var DependenciesScanner = new Class({
         for (var name in this.Hierarchy) {
             this.processItems(this.Hierarchy[name], name);
         }
-        this.writeFile('Hierarchy.json', JSON.stringify(this.Hierarchy, null, 4));
-        this.writeFile('Shim.json', JSON.stringify(this.shim, null, 4));
-        this.writeFile('Files.txt', this.Files.join('\n'));
+        this.writeFile(path.join(__dirname, 'Hierarchy.json'), JSON.stringify(this.Hierarchy, null, 4));
+        this.writeFile(path.join(__dirname, 'Shim.json'), JSON.stringify(this.shim, null, 4));
+        this.writeFile(path.join(__dirname, 'Files.txt'), this.Files.join('\n'));
     }
 });
 

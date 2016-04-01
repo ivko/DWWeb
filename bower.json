@@ -10,13 +10,13 @@
     "moduleType": [ ],
     "homepage": "",
     "private": true,
-    "dependencies": {
-        "jquery": "2.1.4",
-        "jquery-ui": "1.10.3",
-        "requirejs": "2.1.22",
-        "requirejs-text": "2.0.14",
-        "SharedResources": "C:/tfs/DocuWare .NET/Main/src/DocuWare/RestfulWebservices/AspMvcSharedResources/SharedResources"
-    },
+  "dependencies": {
+    "jquery": "2.1.4",
+    "jquery-ui": "1.10.3",
+    "requirejs": "2.1.22",
+    "requirejs-text": "2.0.14",
+    "SharedResources": "C:/tfs/DocuWare .NET/Main/src/DocuWare/RestfulWebservices/AspMvcSharedResources/SharedResources"
+  },
     "ignore": [
         "**/ .*",
         "node_modules",
